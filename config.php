@@ -12,7 +12,8 @@ if (!$mysqli) {
   die("mysqli_init failed");
 }
 
-/* conexión online
-$mysqli -> real_connect($server, $username, $password, $database); */
-$mysqli -> real_connect('localhost', 'root', '', 'tiendamusica');
+
+$mysqli -> real_connect($server, $username, $password, $database);
+/* conexión local
+$mysqli -> real_connect('localhost', 'root', '', 'tiendamusica'); */
 ?>
