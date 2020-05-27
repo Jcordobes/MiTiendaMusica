@@ -11,34 +11,36 @@ $GLOBALS['currpage']='Track Description';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
-<html>
-<!-- head -->
-<?php include 'head.php'; ?>
-<!-- //head -->	
-<body>
-<!-- header -->
-<?php include 'header.php'; ?> 
-<!-- //header -->
-<!-- products-breadcrumb -->
-	<div class="products-breadcrumb">
-		<div class="container">
-			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
-				<li>Canción</li>
-			</ul>
-		</div>
-	</div>
-<!-- //products-breadcrumb -->
-<!-- banner -->
-<?php include 'leftsticky.php'; ?>
-<!-- content -->
-	<div align="center">
-		<h1>Detalles de la canción</h1>
-			<?php
+    <html>
+    <!-- head -->
+    <?php include 'head.php'; ?>
+    <!-- //head -->
+
+    <body>
+        <!-- header -->
+        <?php include 'header.php'; ?>
+        <!-- //header -->
+        <!-- products-breadcrumb -->
+        <div class="products-breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
+                    <li>Canción</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //products-breadcrumb -->
+        <!-- banner -->
+        <?php include 'leftsticky.php'; ?>
+        <!-- content -->
+        <div align="center">
+            <h1>Detalles de la canción</h1>
+            <?php
 	 			$track_id=$_GET['track_id'];
 				$query = "select * from track where track_id=$track_id";
 				$res=$mysqli->query($query);
 				$t='name';
+				echo '<div class="row">';
 				while($arr=$res->fetch_assoc()){ 
 				$cnt=$arr['track_id']%125;
 				$cnt+=1;
@@ -81,19 +83,20 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>	
-		<table class="table">
-			<thead class="thead-dark">
-				<tr>
-					<th scope="col"> Canción </th>
-					<th scope="col"> Artista </th>
-					<th scope="col"> Álbum </th>
-					<th scope="col"> Género </th>
-					<th scope="col"> Fecha de lanzamiento </th>
-				</tr>
-			</thead>
-		<tbody>
-		<?php
+				} ?>
+            <div class="col-12 col-md-9">
+                <table class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"> Canción </th>
+                            <th scope="col"> Artista </th>
+                            <th scope="col"> Álbum </th>
+                            <th scope="col"> Género </th>
+                            <th scope="col"> Fecha de lanzamiento </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
 			$total=0;
 			$track_id=$_GET['track_id'];
 			$arr=($mysqli->query("select * from track where track_id=$track_id"))->fetch_assoc();
@@ -114,22 +117,24 @@ include 'config.php';
 					";
 		
 		?>
-		</tbody>
-		</table>
-				
-	</div>
-<!-- //content -->
-<?php include 'bannerend.php'; ?>
-<!-- //banner -->
-<!-- footer -->
- <?php include 'footer.php'; ?>
-<!-- //footer -->
-<!-- Bootstrap Core JavaScript -->
-<?php include 'corejscript.php'; ?>
- <!-- //Bootstrap Core JavaScript -->
- <!-- Mini Cart -->
-<?php include 'minicart.php'; ?>
- <!-- //Mini Cart -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        </div>
+        <!-- //content -->
+        <?php include 'bannerend.php'; ?>
+        <!-- //banner -->
+        <!-- footer -->
+        <?php include 'footer.php'; ?>
+        <!-- //footer -->
+        <!-- Bootstrap Core JavaScript -->
+        <?php include 'corejscript.php'; ?>
+        <!-- //Bootstrap Core JavaScript -->
+        <!-- Mini Cart -->
+        <?php include 'minicart.php'; ?>
+        <!-- //Mini Cart -->
 
-</body>
-</html>
+    </body>
+
+    </html>

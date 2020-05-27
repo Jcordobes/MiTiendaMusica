@@ -56,12 +56,12 @@ input:focus{
 		<h1>Historial de compras de :</h1>
 		<h2><?php echo $_SESSION["username"]; ?></h2><br>
 		
-		<table border="2", width="60%">
-			<thead>
+		<table border="2", class="table">
+			<thead class="thead-dark">
 				<tr>
-					<th> Canción </th>
-					<th> Precio </th>
-					<th> Fecha de compra </th>
+					<th scope="col"> Canción </th>
+					<th scope="col"> Precio </th>
+					<th scope="col"> Fecha de compra </th>
 				</tr>
 			</thead>
 		<tbody>

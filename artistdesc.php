@@ -11,30 +11,31 @@ $GLOBALS['currpage']='Artist Description';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
-<html>
-<!-- head -->
-<?php include 'head.php'; ?>
-<!-- //head -->	
-<body>
-<!-- header -->
-<?php include 'header.php'; ?> 
-<!-- //header -->
-<!-- products-breadcrumb -->
-	<div class="products-breadcrumb">
-		<div class="container">
-			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
-				<li>Detalles Artista</li>
-			</ul>
-		</div>
-	</div>
-<!-- //products-breadcrumb -->
-<!-- banner -->
-<?php include 'leftsticky.php'; ?>
-<!-- content -->
-	<div align="center">
-		<h1>Detalles del artista</h1>
-			<?php
+    <html>
+    <!-- head -->
+    <?php include 'head.php'; ?>
+    <!-- //head -->
+
+    <body>
+        <!-- header -->
+        <?php include 'header.php'; ?>
+        <!-- //header -->
+        <!-- products-breadcrumb -->
+        <div class="products-breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
+                    <li>Detalles Artista</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //products-breadcrumb -->
+        <!-- banner -->
+        <?php include 'leftsticky.php'; ?>
+        <!-- content -->
+        <div align="center">
+            <h1>Detalles del artista</h1>
+            <?php
 				$artist_id=$_GET['artist_id'];
 				$query = "select * from artist where artist_id=$artist_id";
 				$res=$mysqli->query($query);
@@ -72,19 +73,19 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>	
-		<div class="col-12 col-md-9">
-			<table width="30%" class="table">
-				<thead class="thead-dark">
-					<tr>
-						<th scope="col"> Nombre </th>
-						<th scope="col"> Género </th>
-						<th scope="col"> Edad </th>
-						<th scope="col"> Ciudad Natal </th>
-					</tr>
-				</thead>
-			<tbody>
-			<?php
+				} ?>
+            <div class="col-12 col-md-9">
+                <table width="30%" class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"> Nombre </th>
+                            <th scope="col"> Género </th>
+                            <th scope="col"> Edad </th>
+                            <th scope="col"> Ciudad Natal </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
 				$total=0;
 				//$cid = $_SESSION['customer_id'];
 				$artist_id=$_GET['artist_id'];
@@ -96,21 +97,20 @@ include 'config.php';
 								<td> {$arr['age']} </td><td>{$hometown}</td></tr>
 						";
 			?>
-			</tbody>
-			</table>
-		</div>
-		<?php 
-			echo '</div>'; # end row
-		?>
-		<table width="30%" class="table">
-			<thead class="thead-dark">
-				<tr>
-					<th scope="col"> Número canción </th>
-					<th scope="col"> Canción</th>
-				</tr>
-			</thead>
-		<tbody>
-		<?php
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <table width="30%" class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col"> Número canción </th>
+                    <th scope="col"> Canción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
 			$cnt=1;
 			//$cid = $_SESSION['customer_id'];
 			$artist_id=$_GET['artist_id'];
@@ -125,21 +125,22 @@ include 'config.php';
 			}
 		
 		?>
-		</tbody>
-		</table>		
-	</div>
-<!-- //content -->
-<?php include 'bannerend.php'; ?>
-<!-- //banner -->
-<!-- footer -->
- <?php include 'footer.php'; ?>
-<!-- //footer -->
-<!-- Bootstrap Core JavaScript -->
-<?php include 'corejscript.php'; ?>
- <!-- //Bootstrap Core JavaScript -->
- <!-- Mini Cart -->
-<?php include 'minicart.php'; ?>
- <!-- //Mini Cart -->
+            </tbody>
+        </table>
+        </div>
+        <!-- //content -->
+        <?php include 'bannerend.php'; ?>
+        <!-- //banner -->
+        <!-- footer -->
+        <?php include 'footer.php'; ?>
+        <!-- //footer -->
+        <!-- Bootstrap Core JavaScript -->
+        <?php include 'corejscript.php'; ?>
+        <!-- //Bootstrap Core JavaScript -->
+        <!-- Mini Cart -->
+        <?php include 'minicart.php'; ?>
+        <!-- //Mini Cart -->
 
-</body>
-</html>
+    </body>
+
+    </html>

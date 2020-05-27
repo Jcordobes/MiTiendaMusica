@@ -35,6 +35,7 @@ include 'config.php';
 			<?php
 				$query = "select * from genre";
 				$res=$mysqli->query($query);
+				echo '<div class="row">';
 				$t='name';
 				while($arr=$res->fetch_assoc()){ 
 				//echo $arr['name'];
@@ -67,7 +68,10 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>
+				}
+				
+				echo '</div>';
+				?>
 <!-- //content -->
 <?php include 'bannerend.php'; ?>
 <!-- //banner -->

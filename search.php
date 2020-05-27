@@ -46,6 +46,7 @@ include 'config.php';
 
 				$query = "select * from track where name like '%$search%' limit 1000";
 				$res=$mysqli->query($query);
+				echo '<div class="row">';
 				$t='name';
 				$cnt=0;
 				while($arr=$res->fetch_assoc()){ 
@@ -90,7 +91,10 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>
+				}
+				
+				echo '</div>'
+				?>
 <!-- //content -->
 <?php include 'bannerend.php'; ?>
 <!-- //banner -->

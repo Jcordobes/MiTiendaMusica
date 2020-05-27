@@ -39,6 +39,7 @@ include 'config.php';
 				$album_id=$_GET['album_id'];
 				$query = "select * from album where album_id=$album_id";
 				$res=$mysqli->query($query);
+				echo '<div class="row">';
 				while($arr=$res->fetch_assoc()){ 
 				//echo $arr['name'];
 				$cnt=$arr['album_id']%60;
@@ -72,14 +73,14 @@ include 'config.php';
 						</div>';
 						
 				} ?>
-				<br>	
-
-		<table border="2", width="30%">
-			<thead>
+					
+		<div class="col-12 col-md-9">
+		<table width="30%" class="table">
+			<thead class="thead-dark">
 				<tr>
-					<th> Nombre </th>
-					<th> Número de canciones </th>
-					<th> Fecha de lanzamiento </th>
+					<th scope="col"> Nombre </th>
+					<th scope="col"> Número de canciones </th>
+					<th scope="col"> Fecha de lanzamiento </th>
 				</tr>
 			</thead>
 		<tbody>
@@ -96,11 +97,14 @@ include 'config.php';
 		?>
 		</tbody>
 		</table>
-		<table border="2", width="50%">
-			<thead>
+			</div>
+			</div>
+
+		<table width="30%" class="table">
+			<thead class="thead-dark">
 				<tr>
-					<th> Número de la canción </th>
-					<th> Canción</th>
+					<th scope="col"> Número de la canción </th>
+					<th scope="col"> Canción</th>
 				</tr>
 			</thead>
 		<tbody>
@@ -120,32 +124,6 @@ include 'config.php';
 		?>
 		</tbody>
 		</table>				
-<!-- 		<table border="2", width="30%">
-			<thead>
-				<tr>
-					<th> S.no </th>
-					<th> Track</th>
-				</tr>
-			</thead>
-		<tbody>
-		<?php
-			echo "<tr><td>a</td><td>b</td></tr>";
-			$cnt=1;
-			$cid = $_SESSION['customer_id'];
-			$album_id=$_GET['album_id'];
-			$res=$mysqli->query("select * from compose where album_id=$album_id");
-			while($arr=$res->fetch_assoc()){
-				$track_id=$arr['track_id'];
-				$t1=($mysqli->query("select * from track where track_id=$track_id"))->fetch_assoc();
-					echo "<br>";
-					echo "<tr><td>{$cnt}</td> <td><a href='trackdesc.php?track_id=$track_id'>{$t1['name']}</a></td></tr>
-					";
-					$cnt+=1;
-			}
-		
-		?>
-		</tbody>
-		</table>	 -->	
 	</div>
 <!-- //content -->
 <?php include 'bannerend.php'; ?>

@@ -45,6 +45,7 @@ include 'config.php';
 				else
 				echo "<h2>Busqueda incorrecta</h2>";
 				$res=$mysqli->query("select track_id from categorisedby where genre_id=$genre_id");
+				echo '<div class="row">';
 				while($tem=$res->fetch_assoc()){ 
 				//echo $arr['name'];
 				$track_id=$tem['track_id'];
@@ -86,7 +87,10 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>
+				}
+				
+				echo '</div>';
+				?>
 <!-- //content -->
 <?php include 'bannerend.php'; ?>
 <!-- //banner -->

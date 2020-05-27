@@ -36,24 +36,25 @@ include 'config.php';
 					<ul class="slides">
 						<li>
 							<div class="w3l_banner_nav_right_banner">
-								<h3> <span>Pink Floyd</span> </h3>
+								<h3> <span>Eminem: Revival</span> </h3>
 								<div class="more">
-									<a href="search.php" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+									<a href="albumdesc.php?album_id=4" class="button--saqui button--round-l button--text-thick" data-text="Ir al disco">Ir al disco</a>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="w3l_banner_nav_right_banner1">
+								<h3> <span>Kamelot</span> </h3>
 								<div class="more">
-									<a href="search.php" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+									<a href="artistdesc.php?artist_id=3" class="button--saqui button--round-l button--text-thick" data-text="Ir a la banda">Ir a la banda</a>
 								</div>
 							</div>
 						</li>
 						<li>
 							<div class="w3l_banner_nav_right_banner2">
-								<h3>upto <i>50%</i> off.</h3>
+								<h3>El mejor <i>metal</i> </h3>
 								<div class="more">
-									<a href="search.php" class="button--saqui button--round-l button--text-thick" data-text="Shop now">Shop now</a>
+									<a href="gensearch.php?genre_id=2" class="button--saqui button--round-l button--text-thick" data-text="Ver canciones">Ver canciones</a>
 								</div>
 							</div>
 						</li>
@@ -85,12 +86,13 @@ include 'config.php';
 			<?php
 				$query = "select * from artist order by rating DESC limit 4";
 				$res=$mysqli->query($query);
+				echo '<div class="row">';
 				while($arr=$res->fetch_assoc()){ 
 				//echo $arr['name'];
 				$cnt=$arr['artist_id'] % 250;
 				$cnt+=1;
-				echo'<div class="col-md-3 top_brand_left">
-					<div class="hover14 column">
+				echo'<div class="col-12 col-xs-3 col-sm-3 mb-3 m-0 !important">
+					<div class="hover14">
 						<div class="agile_top_brand_left_grid">
 							<div class="agile_top_brand_left_grid1">
 								<figure>
@@ -118,7 +120,10 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>	
+				}
+
+				echo '</div>';
+				?>	
 		</div>
 	</div>
 <!-- //top-brands -->
@@ -129,6 +134,7 @@ include 'config.php';
 			<?php
 				$query = "select * from track order by release_date ASC limit 14,4";
 				$res=$mysqli->query($query);
+				echo '<div class="row">';
 				$t='name';
 				while($arr=$res->fetch_assoc()){ 
 				$cnt=$arr['track_id']%125;
@@ -148,7 +154,7 @@ include 'config.php';
 												<img height="200px" width="200px" src="track_images/'.$cnt.'.jpg"/>
 											</a>
 											<p style="width: 190px">'.$arr['name'].'</p>
-											<h4>Rs'.$newprice.'<span>'.$price.'</span></h4>
+											<h4>'.$newprice.'<span>'.$price.' €</span></h4>
 										</div>
 										<div class="snipcart-details">
 											<form action="addtocart.php" method="post">
@@ -172,7 +178,10 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>	
+				} 
+				
+				echo '</div>'
+				?>	
 		</div>
 	</div>
 <!-- //fresh-vegetables -->

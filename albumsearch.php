@@ -53,6 +53,7 @@ include 'config.php';
 
 				$query = "select * from album where name like '%$search%'";
 				$res=$mysqli->query($query);
+				echo '<div class="row">';
 				$cnt=0;
 				while($arr=$res->fetch_assoc()){ 
 				//echo $arr['name'];
@@ -86,7 +87,10 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>
+				}
+				
+				echo '</div>';
+				?>
 <!-- //content -->
 <?php include 'bannerend.php'; ?>
 <!-- //banner -->

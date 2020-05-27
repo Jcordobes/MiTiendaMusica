@@ -121,7 +121,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                 <span class="help-block"><?php echo $password_err; ?></span>
             </div>
             <div class="form-group">
-                <input type="submit" class="btn btn-primary" value="Submit">
+                <input type="submit" class="btn btn-primary" value="Iniciar sesión">
             </div>
             <p>¿No dispone de una cuenta? <a href="register.php">Registrarse</a>.</p>
         </form>

@@ -36,13 +36,13 @@ if(!isset($_SESSION['loggedin'])){
 	<div align="center">
 		<h1>resumen del pedido</h1>
 		
-		<table border="2", width="30%">
-			<thead>
+		<table border="2", class="table" col-12 col-md-6>
+			<thead class="thead-dark">
 				<tr>
-					<th> Canción </th>
-					<th> Precio Original </th>
-					<th> Descuento </th>
-					<th> Precio Final </th>
+					<th scope="col"> Canción </th>
+					<th scope="col"> Precio Original </th>
+					<th scope="col"> Descuento </th>
+					<th scope="col"> Precio Final </th>
 				</tr>
 			</thead>
 		<tbody>

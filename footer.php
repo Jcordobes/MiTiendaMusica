@@ -1,11 +1,6 @@
 	<div class="footer">
 		<div class="container">
-			<div class="col-md-3 w3_footer_grid">
-				<h3>información</h3>
-				<ul class="w3_footer_grid_list">
-					<li><a href="about.php">Sobre Nosotros</a></li>
-				</ul>
-			</div>
+			<div class="row">
 			<div class="col-md-3 w3_footer_grid">
 				<h3>Buscar</h3>
 				<ul class="w3_footer_grid_list">
@@ -27,6 +22,7 @@
 							<li><a href="https://www.instagram.com/patel.amey/" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
 						</ul>
 					</div>
+				</div>
 				</div>
 			<div class="clearfix"> </div>
 			<div class="wthree_footer_copy">
