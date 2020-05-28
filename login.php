@@ -1,11 +1,5 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesión
 $GLOBALS['currpage']='Login';
 include 'config.php';
 $username = $password = "";
@@ -61,7 +55,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                             $_SESSION['username'] = $username; 
                             $_SESSION['loggedin'] = TRUE;    
                             $_SESSION['customer_id']= $cid; 
-                            header("location: welcome.php");
+                            header("location: bienvenida.php");
                         } else{
                             // Display an error message if password is not valid
                             $password_err = 'La contraseña introducida no es valida.';
@@ -123,7 +117,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Iniciar sesión">
             </div>
-            <p>¿No dispone de una cuenta? <a href="register.php">Registrarse</a>.</p>
+            <p>¿No dispone de una cuenta? <a href="registro.php">Registrarse</a>.</p>
         </form>
     </div>   
 <!-- //content -->

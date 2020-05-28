@@ -1,11 +1,5 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesión
 session_start();
 $GLOBALS['currpage']='Cart';
 include 'config.php';
@@ -75,7 +69,7 @@ if(!isset($_SESSION['loggedin'])){
 			$name=$arr['name'];
 			// echo $arr['price'];
 				echo "<tr><td>{$cnt}</td><td>{$arr['name']}</td>  <td>{$amount} €</td> <td>{$discount} €</td> <td> {$newprice} €</td>
-						<td><a href = delfcart.php?track_id=$track_id&cid=$cid>  eliminar  </a></td></tr>
+						<td><a href = borrarcarrito.php?track_id=$track_id&cid=$cid>  eliminar  </a></td></tr>
 				";			
 		}
 	}	
@@ -84,7 +78,7 @@ if(!isset($_SESSION['loggedin'])){
 </div>
 <?php
 	echo "<h3 align = 'center'> Su precio total son: ".$cartTotal." €</h3></br>";
-	echo "<h3 align = 'center'><a href='OrderSummary.php?cid=$cid'><span class='label label-success'>Hacer el pedido</span></a> <a href='delfcart.php?cid=$cid&track_id=-1'><span class='label label-danger'>Eliminar Carrito</span></a> </h3></br></br>";
+	echo "<h3 align = 'center'><a href='resumenpedido.php?cid=$cid'><span class='label label-success'>Hacer el pedido</span></a> <a href='borrarcarrito.php?cid=$cid&track_id=-1'><span class='label label-danger'>Eliminar Carrito</span></a> </h3></br></br>";
 
 ?>
 <!-- <a href="#"><span class="label label-success">Success</span></a> -->

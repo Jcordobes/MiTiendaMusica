@@ -1,11 +1,5 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesión
 session_start();
 $GLOBALS['currpage']='Track Description';
 include 'config.php';
@@ -55,14 +49,14 @@ include 'config.php';
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="trackdesc.php?track_id='.$arr['track_id'].'">
+											<a href="cancdesc.php?track_id='.$arr['track_id'].'">
 												<img height="200px" width="200px" src="track_images/'.$cnt.'.jpg"/>
 											</a>
 											<p style="width: 190px">'.$arr['name'].'</p>
 											<h4>'.$newprice.' €<span>'.$price.'</span></h4>
 										</div>
 										<div class="snipcart-details">
-											<form action="addtocart.php" method="post">
+											<form action="añadircarrito.php" method="post">
 												<fieldset>
 													<input type="hidden" name="cmd" value="_cart" />
 													<input type="hidden" name="add" value="1" />
@@ -113,7 +107,7 @@ include 'config.php';
 			$genre_id=$arr['genre_id'];
 					echo "<br>";
 					echo "<tr><td>{$track}</td> <td><a href='artistdesc.php?artist_id=$artist_id'>{$name}</a></td>
-							<td><a href='albumdesc.php?album_id=$album_id'> {$album} </a>	</td><td><a href='gensearch.php?genre_id=$genre_id'>{$genre}</a></td><td>{$date}</td></tr>
+							<td><a href='albumdesc.php?album_id=$album_id'> {$album} </a>	</td><td><a href='generobusqueda.php?genre_id=$genre_id'>{$genre}</a></td><td>{$date}</td></tr>
 					";
 		
 		?>

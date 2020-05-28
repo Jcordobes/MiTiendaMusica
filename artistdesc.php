@@ -1,11 +1,5 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesión
 session_start();
 $GLOBALS['currpage']='Artist Description';
 include 'config.php';
@@ -58,7 +52,7 @@ include 'config.php';
 
 										</div>
 										<div class="snipcart-details">
-											<form action="addtocart.php" method="post">
+											<form action="añadircarrito.php" method="post">
 												<fieldset>
 													<input type="hidden" name="cmd" value="_cart" />
 													<input type="hidden" name="add" value="1" />
@@ -119,7 +113,7 @@ include 'config.php';
 				$track_id=$arr['track_id'];
 				$t1=($mysqli->query("select * from track where track_id=$track_id"))->fetch_assoc();
 					echo "<br>";
-					echo "<tr><td>{$cnt}</td> <td><a href='trackdesc.php?track_id=$track_id'>{$t1['name']}</a></td></tr>
+					echo "<tr><td>{$cnt}</td> <td><a href='cancdesc.php?track_id=$track_id'>{$t1['name']}</a></td></tr>
 					";
 					$cnt+=1;
 			}

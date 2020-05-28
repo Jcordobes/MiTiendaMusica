@@ -1,13 +1,7 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesión
 session_start();
-$GLOBALS['currpage']='Genre';
+$GLOBALS['currpage']='Artist Search Results';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
@@ -24,7 +18,7 @@ include 'config.php';
 		<div class="container">
 			<ul>
 				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
-				<li>Géneros</li>
+				<li>Lista de artistas</li>
 			</ul>
 		</div>
 	</div>
@@ -32,32 +26,51 @@ include 'config.php';
 <!-- banner -->
 <?php include 'leftsticky.php'; ?>
 <!-- content -->
+		<div class="w3l_search" style="float:right">
+			<form action="artbusqueda.php" method="post">
+				<input type="text" name="searchstr" value="Buscar un artista..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Buscar un artista...';}" required="">
+				<input type="submit" value=" ">
+			</form>
+		</div>
+		<br> <br>
 			<?php
-				$query = "select * from genre";
+				if(isset($_POST['searchstr']))
+				$search = $_POST['searchstr'];
+				else if(isset($_GET['searchstr']))
+				$search=$_GET['searchstr'];
+				else
+				$search="";
+				if($search!='')
+				echo "<h2>Mostrando resultados para: '". $search . "'</h2>";
+				else
+				echo "<h2>Lista de artistas</h2>";
+
+				$query = "select * from artist where concat(first_name,' ',last_name) like '%$search%' limit 1000";
 				$res=$mysqli->query($query);
 				echo '<div class="row">';
-				$t='name';
 				while($arr=$res->fetch_assoc()){ 
 				//echo $arr['name'];
-				echo'<div class="col-md-3 top_brand_left">
-					<div class="hover14 column">
+				$cnt=$arr['artist_id'] % 250;
+				$cnt+=1;
+				echo'<div class="col-12 col-xs-3 col-sm-3 mb-3 m-0 !important">
+					<div class="hover14">
 						<div class="agile_top_brand_left_grid">
 							<div class="agile_top_brand_left_grid1">
 								<figure>
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
-											<a href="gensearch.php?genre_id='.$arr['genre_id'].'">
-												<img height="200px" width="200px" src="genre_images/'.$arr['genre'].'.jpg"/>
+											<a href="artistdesc.php?artist_id='.$arr['artist_id'].'">
+												<img height="200px" width="200px" src="artist_images/'.$cnt.'.jpg"/>
 											</a>
-											<h4>'.$arr['genre'].'</h4>
+											<h4>'.$arr['first_name'].' '.$arr['last_name'].'</h4>
+
 										</div>
 										<div class="snipcart-details">
-											<form action="gensearch.php" method="post">
+											<form action="añadircarrito.php" method="post">
 												<fieldset>
 													<input type="hidden" name="cmd" value="_cart" />
 													<input type="hidden" name="add" value="1" />
-													<input type="hidden" name="genre_id" value='.$arr['genre_id'].' />
-													<input type="submit" name="submit" value="Ver canciones" class="button" />
+													<input type="hidden" name="artist_id" value='.$arr['artist_id'].' />
 												</fieldset>
 											</form>
 										</div>
@@ -68,10 +81,10 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				}
+				} 
 				
 				echo '</div>';
-				?>
+				?>	
 <!-- //content -->
 <?php include 'bannerend.php'; ?>
 <!-- //banner -->

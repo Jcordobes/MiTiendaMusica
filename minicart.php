@@ -8,7 +8,7 @@
 				total = 0,
 				i;
 
-			// Count the number of each item in the cart
+			// Cuenta la cantidad de objetos en el carrito
 			for (i = 0; i < len; i++) {
 				total += items[i].get('quantity');
 			}

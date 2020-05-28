@@ -1,5 +1,5 @@
 <head>
-<title>Digital Music Marketplace | 
+<title>Music Origins Store |  
 <?php
 echo $GLOBALS['currpage'];
 ?>

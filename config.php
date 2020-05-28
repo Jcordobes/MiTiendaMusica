@@ -1,19 +1,16 @@
 <?php
-/* Database credentials. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
+/* Inserción de los credenciales */
 $server='den1.mysql2.gear.host';
 $username='tiendamusica';
 $password='Re495JfD4!?M';
 $database='tiendamusica';
-/* Attempt to connect to MySQL database */
+/* Intento de conexión con mensaje de error en caso de fallo. */
 
 $mysqli = mysqli_init();
 if (!$mysqli) {
   die("mysqli_init failed");
 }
 
-
 $mysqli -> real_connect($server, $username, $password, $database);
-/* conexión local
-$mysqli -> real_connect('localhost', 'root', '', 'tiendamusica'); */
+
 ?>

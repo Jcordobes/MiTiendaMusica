@@ -1,11 +1,5 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesión
 session_start();
 include 'config.php';
 $type=$_GET['type'];
@@ -23,13 +17,13 @@ if($type==1){
 		$q-=1;
 		$sql="update cart set amount=$q where customer_id=$cid and track_id=$track_id";
 		$mysqli->query($sql);
-		header("location: cart.php");
+		header("location: carrito.php");
 	}
 }
 else{
 	$q+=1;
 	$sql="update cart set amount=$q where customer_id=$cid and track_id=$track_id";
 	$mysqli->query($sql);
-	header("location: cart.php");	
+	header("location: carrito.php");	
 }
 ?>	

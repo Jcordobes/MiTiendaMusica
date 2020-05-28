@@ -1,11 +1,5 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesión
 session_start();
 $GLOBALS['currpage']='Order Summary';
 include 'config.php';
@@ -82,7 +76,7 @@ if(!isset($_SESSION['loggedin'])){
 		echo "</br>";
 		$tp = $_SESSION["customer_id"] ;
 		?>
-		<form name='form' method='post' action="placeorder.php">
+		<form name='form' method='post' action="realizarpedido.php">
 		<input type="submit" name="submit" value="Realizar el pedido">
 		</form><div>
 <!-- Bootstrap Core JavaScript -->

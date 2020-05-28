@@ -1,11 +1,5 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesión
 session_start();
 $GLOBALS['currpage']='Layout';
 include 'config.php';
@@ -47,7 +41,7 @@ if(!isset($_SESSION['loggedin'])){
 	$res=$mysqli->query($sql);	
 	if($res->num_rows==0){
 			echo "<h3 align = 'center'> No hay productos en el carrito </h3>"; 
-			echo "<h3 align = 'center'><a href = previousorders.php>  Ver compras anteriores  </a></h3><br>";
+			echo "<h3 align = 'center'><a href = pedidosanteriores.php>  Ver compras anteriores  </a></h3><br>";
 			echo "<h3 align = 'center'><a href = logout.php>  Desconectarse  </a></h3>";		
 	}
 	else{
@@ -70,7 +64,7 @@ if(!isset($_SESSION['loggedin'])){
 			$mysqli->query($sql);		
 		}	
 			echo "<h3 align = 'center'> Se realizó el pedido </h3>"; 
-			echo "<h3 align = 'center'><a href = previousorders.php>  Ver compras anteriores  </a></h3><br>";
+			echo "<h3 align = 'center'><a href = pedidosanteriores.php>  Ver compras anteriores  </a></h3><br>";
 			echo "<h3 align = 'center'><a href = logout.php>  Desconectarse  </a></h3>";
 	}
 	

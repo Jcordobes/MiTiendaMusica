@@ -13,20 +13,10 @@ $(document).ready(function(){
     );
 });
 </script>
-<!-- here stars scrolling icon -->
+<!-- Icono desplegable -->
 	<script type="text/javascript">
-		$(document).ready(function() {
-			/*
-				var defaults = {
-				containerID: 'toTop', // fading element id
-				containerHoverID: 'toTopHover', // fading element hover id
-				scrollSpeed: 1200,
-				easingType: 'linear' 
-				};
-			*/
-								
-			$().UItoTop({ easingType: 'easeOutQuart' });
-								
+		$(document).ready(function() {							
+			$().UItoTop({ easingType: 'easeOutQuart' });					
 			});
 	</script>
-<!-- //here ends scrolling icon -->
+<!-- //Acabo icono desplegable -->

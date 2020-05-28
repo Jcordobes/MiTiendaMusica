@@ -1,13 +1,7 @@
-<!--
-author: W3layouts
-author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <?php
-// Start the session
+// Iniciar sesion
 session_start();
-$GLOBALS['currpage']='Album Search Results';
+$GLOBALS['currpage']='Resultados de busqueda de álbumes';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
@@ -33,7 +27,7 @@ include 'config.php';
 <?php include 'leftsticky.php'; ?>
 <!-- content -->
 		<div class="w3l_search" style="float:right">
-			<form action="albumsearch.php" method="post">
+			<form action="albumbusqueda.php" method="post">
 				<input type="text" name="searchstr" value="Buscar un álbum..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Buscar un álbum...';}" required="">
 				<input type="submit" value=" ">
 			</form>
@@ -72,7 +66,7 @@ include 'config.php';
 											<h4>'.$arr['name'].'</h4>
 										</div>
 										<div class="snipcart-details">
-											<form action="addtocart.php" method="post">
+											<form action="añadircarrito.php" method="post">
 												<fieldset>
 													<input type="hidden" name="cmd" value="_cart" />
 													<input type="hidden" name="add" value="1" />

@@ -2,16 +2,16 @@
 <html>
 	<div class="agileits_header">
 		<div class="w3l_offers">
-			<a href="index.php">Tienda de música</a>
+			<a href="index.php">Music Origins Store</a>
 		</div>
 		<div class="w3l_search">
-			<form action="search.php" method="post">
+			<form action="busqueda.php" method="post">
 				<input type="text" name="searchstr" value="Buscar..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Buscar...';}" required="">
 				<input type="submit" value=" ">
 			</form>
 		</div>
 		<div class="product_list_header">  
-			<form action="cart.php" method="post" class="last">
+			<form action="carrito.php" method="post" class="last">
 				<fieldset>
                     <input type="hidden" name="cmd" value="_cart" />
                     <input type="hidden" name="display" value="1" />
@@ -29,13 +29,13 @@
 							<ul class="dropdown-menu drp-mnu">
 							<?php 
 							if(isset($_SESSION["username"])){
-							echo "<li><a href='previousorders.php'>Historial de Compras</a></li>";
+							echo "<li><a href='pedidosanteriores.php'>Historial de Compras</a></li>";
 							echo "<li><a href='logout.php'>Desconectarse</a></li>"; 
 							
 							}
 							else{
 								echo '<li><a href="login.php">Iniciar Sesión</a></li> 
-								<li><a href="register.php">Registrarse</a></li>';
+								<li><a href="registro.php">Registrarse</a></li>';
 							}
 							?>
 							</ul>
@@ -46,7 +46,7 @@
 		</div>
 		<div class="clearfix"> </div>
 	</div>
-<!-- script-for sticky-nav -->
+<!-- script para sticky-nav -->
 	<script>
 	$(document).ready(function() {
 		 var navoffeset=$(".agileits_header").offset().top;
@@ -61,12 +61,12 @@
 		 
 	});
 	</script>
-<!-- //script-for sticky-nav -->
+<!-- //script para sticky-nav -->
 	<div class="logo_products">
 		<div class="container">
 			<div class="w3ls_logo_products_left1">
 				<ul class="special_items">
-					<li><a href="search.php">Productos</a><i>/</i></li>
+					<li><a href="busqueda.php">Productos</a><i>/</i></li>
 				</ul>
 			</div>
 			<div class="w3ls_logo_products_left1">

@@ -4,16 +4,16 @@
 
 	        <ul class="nav flex-column">
 	            <li class="nav-item">
-	                <a class="nav-link active" href="search.php">Canciones</a>
+	                <a class="nav-link active" href="busqueda.php">Canciones</a>
 	            </li>
 	            <li class="nav-item">
-	                <a class="nav-link" href="artsearch.php">Artistas</a>
+	                <a class="nav-link" href="artbusqueda.php">Artistas</a>
 	            </li>
 	            <li class="nav-item">
-	                <a class="nav-link" href="genre.php">Géneros</a>
+	                <a class="nav-link" href="genero.php">Géneros</a>
 	            </li>
 	            <li class="nav-item">
-	                <a class="nav-link" href="albumsearch.php">Álbumes</a>
+	                <a class="nav-link" href="albumbusqueda.php">Álbumes</a>
 	            </li>
 	        </ul>
 	        <!-- /.navbar-collapse -->
