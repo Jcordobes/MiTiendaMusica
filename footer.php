@@ -30,7 +30,7 @@
 	                    </ul>
 	                </div>
 	            </div>
-				<!-- //Acaban las redes sociales -->
+	            <!-- //Acaban las redes sociales -->
 	        </div>
 	        <div class="clearfix"> </div>
 	        <div class="wthree_footer_copy">

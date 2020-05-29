@@ -5,31 +5,32 @@ $GLOBALS['currpage']='Descripción de álbum';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
-<html>
-<!-- head -->
-<?php include 'head.php'; ?>
+    <html>
+    <!-- head -->
+    <?php include 'head.php'; ?>
 
-<!-- //head -->	
-<body>
-<!-- header -->
-<?php include 'header.php'; ?> 
-<!-- //header -->
-<!-- breadcrumb -->
-	<div class="products-breadcrumb">
-		<div class="container">
-			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
-				<li>Álbum</li>
-			</ul>
-		</div>
-	</div>
-<!-- //breadcrumb -->
-<!-- banner -->
-<?php include 'leftsticky.php'; ?>
-<!-- content -->
-	<div align="center">
-		<h1>Detalles del Álbum</h1>
-			<?php
+    <!-- //head -->
+
+    <body>
+        <!-- header -->
+        <?php include 'header.php'; ?>
+        <!-- //header -->
+        <!-- breadcrumb -->
+        <div class="products-breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
+                    <li>Álbum</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //breadcrumb -->
+        <!-- banner -->
+        <?php include 'leftsticky.php'; ?>
+        <!-- content -->
+        <div align="center">
+            <h1>Detalles del Álbum</h1>
+            <?php
 				$album_id=$_GET['album_id'];
 				$query = "select * from album where album_id=$album_id";
 				$res=$mysqli->query($query);
@@ -66,18 +67,18 @@ include 'config.php';
 						</div>';
 						
 				} ?>
-					
-		<div class="col-12 col-md-9">
-		<table width="30%" class="table">
-			<thead class="thead-dark">
-				<tr>
-					<th scope="col"> Nombre </th>
-					<th scope="col"> Número de canciones </th>
-					<th scope="col"> Fecha de lanzamiento </th>
-				</tr>
-			</thead>
-		<tbody>
-		<?php
+            <!-- Inicio tabla datos del álbum -->
+            <div class="col-12 col-md-9">
+                <table width="30%" class="table">
+                    <thead class="thead-dark">
+                        <tr>
+                            <th scope="col"> Nombre </th>
+                            <th scope="col"> Número de canciones </th>
+                            <th scope="col"> Fecha de lanzamiento </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
 			$total=0;
 			$album_id=$_GET['album_id'];
 			$arr=($mysqli->query("select * from album where album_id=$album_id"))->fetch_assoc();
@@ -88,20 +89,21 @@ include 'config.php';
 					";
 		
 		?>
-		</tbody>
-		</table>
-			</div>
-			</div>
-
-		<table width="30%" class="table">
-			<thead class="thead-dark">
-				<tr>
-					<th scope="col"> Número de la canción </th>
-					<th scope="col"> Canción</th>
-				</tr>
-			</thead>
-		<tbody>
-		<?php
+                    </tbody>
+                </table>
+            </div>
+            <!-- //Fin tabla datos del álbum -->
+        </div>
+        <!-- Inicio tabla canciones del álbum -->
+        <table width="30%" class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col"> Número de la canción </th>
+                    <th scope="col"> Canción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php
 			$cnt=1;
 			$album_id=$_GET['album_id'];
 			$res=$mysqli->query("select * from compose where album_id=$album_id");
@@ -115,20 +117,22 @@ include 'config.php';
 			}
 		
 		?>
-		</tbody>
-		</table>				
-	</div>
-<!-- //content -->
-<?php include 'bannerend.php'; ?>
-<!-- //banner -->
-<!-- footer -->
- <?php include 'footer.php'; ?>
-<!-- //footer -->
-<!-- Bootstrap Core JavaScript -->
-<?php include 'corejscript.php'; ?>
- <!-- //Bootstrap Core JavaScript -->
- <!-- Mini Cart -->
-<?php include 'minicart.php'; ?>
- <!-- //Mini Cart -->
-</body>
-</html>
+            </tbody>
+        </table>
+        <!-- //Final tabla canciones del albúm -->
+        </div>
+        <!-- //content -->
+        <?php include 'bannerend.php'; ?>
+        <!-- //banner -->
+        <!-- footer -->
+        <?php include 'footer.php'; ?>
+        <!-- //footer -->
+        <!-- Bootstrap Core JavaScript -->
+        <?php include 'corejscript.php'; ?>
+        <!-- //Bootstrap Core JavaScript -->
+        <!-- Mini Cart -->
+        <?php include 'minicart.php'; ?>
+        <!-- //Mini Cart -->
+    </body>
+
+    </html>

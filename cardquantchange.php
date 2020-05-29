@@ -26,4 +26,4 @@ else{
 	$mysqli->query($sql);
 	header("location: carrito.php");	
 }
-?>	
+?>

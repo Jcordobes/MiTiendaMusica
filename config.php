@@ -10,7 +10,6 @@ $mysqli = mysqli_init();
 if (!$mysqli) {
   die("mysqli_init failed");
 }
-
 $mysqli -> real_connect($server, $username, $password, $database);
 
 ?>

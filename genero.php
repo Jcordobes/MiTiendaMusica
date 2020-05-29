@@ -5,34 +5,34 @@ $GLOBALS['currpage']='Genero';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
-<html>
-<!-- head -->
-<?php include 'head.php'; ?>
-<!-- //head -->	
-<body>
-<!-- header -->
-<?php include 'header.php'; ?> 
-<!-- //header -->
-<!-- breadcrumb -->
-	<div class="products-breadcrumb">
-		<div class="container">
-			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
-				<li>Géneros</li>
-			</ul>
-		</div>
-	</div>
-<!-- //breadcrumb -->
-<!-- banner -->
-<?php include 'leftsticky.php'; ?>
-<!-- content -->
-			<?php
+    <html>
+    <!-- head -->
+    <?php include 'head.php'; ?>
+    <!-- //head -->
+
+    <body>
+        <!-- header -->
+        <?php include 'header.php'; ?>
+        <!-- //header -->
+        <!-- breadcrumb -->
+        <div class="products-breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
+                    <li>Géneros</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //breadcrumb -->
+        <!-- banner -->
+        <?php include 'leftsticky.php'; ?>
+        <!-- content -->
+        <?php
 				$query = "select * from genre";
 				$res=$mysqli->query($query);
 				echo '<div class="row">';
 				$t='name';
 				while($arr=$res->fetch_assoc()){ 
-				//echo $arr['name'];
 				echo'<div class="col-md-3 top_brand_left">
 					<div class="hover14 column">
 						<div class="agile_top_brand_left_grid">
@@ -66,18 +66,19 @@ include 'config.php';
 				
 				echo '</div>';
 				?>
-<!-- //content -->
-<?php include 'bannerend.php'; ?>
-<!-- //banner -->
-<!-- footer -->
- <?php include 'footer.php'; ?>
-<!-- //footer -->
-<!-- Bootstrap Core JavaScript -->
-<?php include 'corejscript.php'; ?>
- <!-- //Bootstrap Core JavaScript -->
- <!-- Mini Cart -->
-<?php include 'minicart.php'; ?>
- <!-- //Mini Cart -->
+        <!-- //content -->
+        <?php include 'bannerend.php'; ?>
+        <!-- //banner -->
+        <!-- footer -->
+        <?php include 'footer.php'; ?>
+        <!-- //footer -->
+        <!-- Bootstrap Core JavaScript -->
+        <?php include 'corejscript.php'; ?>
+        <!-- //Bootstrap Core JavaScript -->
+        <!-- Mini Cart -->
+        <?php include 'minicart.php'; ?>
+        <!-- //Mini Cart -->
 
-</body>
-</html>
+    </body>
+
+    </html>

@@ -5,79 +5,86 @@ $GLOBALS['currpage']='Inicio';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
-<html>
-<!-- head -->
-<?php include 'head.php'; ?>
-<!-- //head -->	
-<body>
-<!-- header -->
-<?php include 'header.php'; ?> 
-<!-- //header -->
-<!-- breadcrumb -->
-	<div class="products-breadcrumb">
-		<div class="container">
-			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
+    <html>
+    <!-- head -->
+    <?php include 'head.php'; ?>
+    <!-- //head -->
 
-			</ul>
-		</div>
-	</div>
-<!-- //breadcrumb -->
-<!-- banner -->
-<?php include 'leftsticky.php'; ?>
-			<section class="slider">
-				<div class="flexslider">
-					<ul class="slides">
-						<li>
-							<div class="w3l_banner_nav_right_banner">
-								<h3> <span>Eminem: Revival</span> </h3>
-								<div class="more">
-									<a href="albumdesc.php?album_id=4" class="button--saqui button--round-l button--text-thick" data-text="Ir al disco">Ir al disco</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="w3l_banner_nav_right_banner1">
-								<h3> <span>Kamelot</span> </h3>
-								<div class="more">
-									<a href="artistdesc.php?artist_id=3" class="button--saqui button--round-l button--text-thick" data-text="Ir a la banda">Ir a la banda</a>
-								</div>
-							</div>
-						</li>
-						<li>
-							<div class="w3l_banner_nav_right_banner2">
-								<h3>El mejor <i>metal</i> </h3>
-								<div class="more">
-									<a href="generobusqueda.php?genre_id=2" class="button--saqui button--round-l button--text-thick" data-text="Ver canciones">Ver canciones</a>
-								</div>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<!-- flexSlider -->
-				<link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
-				<script defer src="js/jquery.flexslider.js"></script>
-				<script type="text/javascript">
-				$(window).load(function(){
-				  $('.flexslider').flexslider({
-					animation: "slide",
-					start: function(slider){
-					  $('body').removeClass('loading');
-					}
-				  });
-				});
-			  </script>
-			<!-- //flexSlider -->
-		</div>
-		<div class="clearfix"></div>
-	</div>
-<!-- banner -->
-<!-- top-brands -->
-	<div class="top-brands">
-		<div class="container">
-			<h3>Artistas destacados</h3>
-			<?php
+    <body>
+        <!-- header -->
+        <?php include 'header.php'; ?>
+        <!-- //header -->
+        <!-- breadcrumb -->
+        <div class="products-breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
+
+                </ul>
+            </div>
+        </div>
+        <!-- //breadcrumb -->
+        <!-- banner -->
+        <?php include 'leftsticky.php'; ?>
+        <section class="slider">
+            <div class="flexslider">
+                <ul class="slides">
+                    <li>
+                        <div class="w3l_banner_nav_right_banner">
+                            <h3> <span>Eminem: Revival</span> </h3>
+                            <div class="more">
+                                <a href="albumdesc.php?album_id=4"
+                                    class="button--saqui button--round-l button--text-thick" data-text="Ir al disco">Ir
+                                    al disco</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w3l_banner_nav_right_banner1">
+                            <h3> <span>Kamelot</span> </h3>
+                            <div class="more">
+                                <a href="artistdesc.php?artist_id=3"
+                                    class="button--saqui button--round-l button--text-thick"
+                                    data-text="Ir a la banda">Ir a la banda</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="w3l_banner_nav_right_banner2">
+                            <h3>El mejor <i>metal</i> </h3>
+                            <div class="more">
+                                <a href="generobusqueda.php?genre_id=2"
+                                    class="button--saqui button--round-l button--text-thick"
+                                    data-text="Ver canciones">Ver canciones</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- flexSlider -->
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
+        <script defer src="js/jquery.flexslider.js"></script>
+        <script type="text/javascript">
+        $(window).load(function() {
+            $('.flexslider').flexslider({
+                animation: "slide",
+                start: function(slider) {
+                    $('body').removeClass('loading');
+                }
+            });
+        });
+        </script>
+        <!-- //flexSlider -->
+        </div>
+        <div class="clearfix"></div>
+        </div>
+        <!-- banner -->
+        <!-- top-brands -->
+        <div class="top-brands">
+            <div class="container">
+                <h3>Artistas destacados</h3>
+                <?php
 				$query = "select * from artist order by rating DESC limit 4";
 				$res=$mysqli->query($query);
 				echo '<div class="row">';
@@ -116,15 +123,15 @@ include 'config.php';
 				}
 
 				echo '</div>';
-				?>	
-		</div>
-	</div>
-<!-- //top-brands -->
-<!-- fresh-vegetables -->
-	<div class="fresh-vegetables">
-		<div class="container">
-			<h3>Novedades</h3>
-			<?php
+				?>
+            </div>
+        </div>
+        <!-- //top-brands -->
+        <!-- fresh-tracks -->
+        <div class="fresh-tracks">
+            <div class="container">
+                <h3>Novedades</h3>
+                <?php
 				$query = "select * from track order by release_date ASC limit 14,4";
 				$res=$mysqli->query($query);
 				echo '<div class="row">';
@@ -173,19 +180,20 @@ include 'config.php';
 				} 
 				
 				echo '</div>'
-				?>	
-		</div>
-	</div>
-<!-- //fresh-vegetables -->
-<!-- footer -->
- <?php include 'footer.php'; ?>
-<!-- //footer -->
-<!-- Bootstrap Core JavaScript -->
-<?php include 'corejscript.php'; ?>
- <!-- //Bootstrap Core JavaScript -->
- <!-- Mini Cart -->
-<?php include 'minicart.php'; ?>
- <!-- //Mini Cart -->
+				?>
+            </div>
+        </div>
+        <!-- //fresh-tracks -->
+        <!-- footer -->
+        <?php include 'footer.php'; ?>
+        <!-- //footer -->
+        <!-- Bootstrap Core JavaScript -->
+        <?php include 'corejscript.php'; ?>
+        <!-- //Bootstrap Core JavaScript -->
+        <!-- Mini Cart -->
+        <?php include 'minicart.php'; ?>
+        <!-- //Mini Cart -->
 
-</body>
-</html>
+    </body>
+
+    </html>

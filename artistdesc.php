@@ -67,7 +67,8 @@ include 'config.php';
 						</div>
 						</div>';
 						
-				} ?>
+                } ?>
+
             <div class="col-12 col-md-9">
                 <table width="30%" class="table">
                     <thead class="thead-dark">
@@ -81,7 +82,6 @@ include 'config.php';
                     <tbody>
                         <?php
 				$total=0;
-				//$cid = $_SESSION['customer_id'];
 				$artist_id=$_GET['artist_id'];
 				$arr=($mysqli->query("select * from artist where artist_id=$artist_id"))->fetch_assoc();
 				$name=$arr['first_name']." ".$arr['last_name'];
@@ -106,7 +106,6 @@ include 'config.php';
             <tbody>
                 <?php
 			$cnt=1;
-			//$cid = $_SESSION['customer_id'];
 			$artist_id=$_GET['artist_id'];
 			$res=$mysqli->query("select * from makes where artist_id=$artist_id");
 			while($arr=$res->fetch_assoc()){
@@ -117,7 +116,6 @@ include 'config.php';
 					";
 					$cnt+=1;
 			}
-		
 		?>
             </tbody>
         </table>

@@ -5,35 +5,37 @@ $GLOBALS['currpage']='Resultados de busqueda de álbumes';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
-<html>
-<!-- head -->
-<?php include 'head.php'; ?>
-<!-- //head -->	
-<body>
-<!-- header -->
-<?php include 'header.php'; ?> 
-<!-- //header -->
-<!-- breadcrumb -->
-	<div class="products-breadcrumb">
-		<div class="container">
-			<ul>
-				<li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
-				<li>Lista de álbumes</li>
-			</ul>
-		</div>
-	</div>
-<!-- //breadcrumb -->
-<!-- banner -->
-<?php include 'leftsticky.php'; ?>
-<!-- content -->
-		<div class="w3l_search" style="float:right">
-			<form action="albumbusqueda.php" method="post">
-				<input type="text" name="searchstr" value="Buscar un álbum..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Buscar un álbum...';}" required="">
-				<input type="submit" value=" ">
-			</form>
-		</div>
-		<br> <br>
-			<?php
+    <html>
+    <!-- head -->
+    <?php include 'head.php'; ?>
+    <!-- //head -->
+
+    <body>
+        <!-- header -->
+        <?php include 'header.php'; ?>
+        <!-- //header -->
+        <!-- breadcrumb -->
+        <div class="products-breadcrumb">
+            <div class="container">
+                <ul>
+                    <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.php">Inicio</a><span>|</span></li>
+                    <li>Lista de álbumes</li>
+                </ul>
+            </div>
+        </div>
+        <!-- //breadcrumb -->
+        <!-- banner -->
+        <?php include 'leftsticky.php'; ?>
+        <!-- content -->
+        <div class="w3l_search" style="float:right">
+            <form action="albumbusqueda.php" method="post">
+                <input type="text" name="searchstr" value="Buscar un álbum..." onfocus="this.value = '';"
+                    onblur="if (this.value == '') {this.value = 'Buscar un álbum...';}" required="">
+                <input type="submit" value=" ">
+            </form>
+        </div>
+        <br> <br>
+        <?php
 				if(isset($_POST['searchstr']))
 				$search = $_POST['searchstr'];
 				else if(isset($_GET['searchstr']))
@@ -82,18 +84,19 @@ include 'config.php';
 				}	
 				echo '</div>';
 				?>
-<!-- //content -->
-<?php include 'bannerend.php'; ?>
-<!-- //banner -->
-<!-- footer -->
- <?php include 'footer.php'; ?>
-<!-- //footer -->
-<!-- Bootstrap Core JavaScript -->
-<?php include 'corejscript.php'; ?>
- <!-- //Bootstrap Core JavaScript -->
- <!-- Mini Cart -->
-<?php include 'minicart.php'; ?>
- <!-- //Mini Cart -->
+        <!-- //content -->
+        <?php include 'bannerend.php'; ?>
+        <!-- //banner -->
+        <!-- footer -->
+        <?php include 'footer.php'; ?>
+        <!-- //footer -->
+        <!-- Bootstrap Core JavaScript -->
+        <?php include 'corejscript.php'; ?>
+        <!-- //Bootstrap Core JavaScript -->
+        <!-- Mini Cart -->
+        <?php include 'minicart.php'; ?>
+        <!-- //Mini Cart -->
 
-</body>
-</html>
+    </body>
+
+    </html>

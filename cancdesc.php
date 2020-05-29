@@ -41,7 +41,6 @@ include 'config.php';
 				$price=$arr['price'];
 				$discount=(($mysqli->query("select count_discount($price)"))->fetch_array())[0];
 				$newprice=$price-$discount;
-				//echo $arr['name'];
 				echo'<div class="col-md-3 top_brand_left">
 					<div class="hover14 column">
 						<div class="agile_top_brand_left_grid">

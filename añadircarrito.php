@@ -14,4 +14,4 @@ if($res->num_rows==0){
 	$stmt->execute();
 	header("location: carrito.php");
 }
-?>	
+?>
