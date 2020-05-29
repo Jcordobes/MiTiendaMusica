@@ -41,7 +41,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="generobusqueda.php?genre_id='.$arr['genre_id'].'">
-												<img height="200px" width="200px" src="generos_img/'.$arr['genre'].'.jpg"/>
+												<img height="200px" width="200px" src="generos_img/'.$arr['genre'].'.jpg" alt="imagen género"/>
 											</a>
 											<h4>'.$arr['genre'].'</h4>
 										</div>

@@ -46,7 +46,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="artistdesc.php?artist_id='.$arr['artist_id'].'">
-												<img height="200px" width="200px" src="artistas_img/'.$cnt.'.jpg" "alt="imagen artista"/>
+												<img height="200px" width="200px" src="artistas_img/'.$cnt.'.jpg" alt="imagen artista"/>
 											</a>
 											<h4>'.$arr['first_name'].' '.$arr['last_name'].'</h4>
 

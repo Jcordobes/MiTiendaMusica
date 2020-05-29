@@ -55,7 +55,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="cancdesc.php?track_id='.$arr['track_id'].'">
-												<img height="200px" width="200px" src="canciones_img/'.$cnt.'.jpg"/>
+												<img height="200px" width="200px" src="canciones_img/'.$cnt.'.jpg" alt="imagen género"/>
 											</a>
 											<p style="width: 190px">'.$arr['name'].'</p>
 											<h4>'.$arr['price'].' €</h4>

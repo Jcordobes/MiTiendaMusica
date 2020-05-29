@@ -99,7 +99,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="artistdesc.php?artist_id='.$arr['artist_id'].'">
-												<img height="200px" width="200px" src="artistas_img/'.$cnt.'.jpg"/>
+												<img height="200px" width="200px" src="artistas_img/'.$cnt.'.jpg" alt="imagen artista"/>
 											</a>
 											<h4>'.$arr['first_name'].' '.$arr['last_name'].'</h4>
 
@@ -150,7 +150,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="cancdesc.php?track_id='.$arr['track_id'].'">
-												<img height="200px" width="200px" src="canciones_img/'.$cnt.'.jpg"/>
+												<img height="200px" width="200px" src="canciones_img/'.$cnt.'.jpg" alt="imagen canción"/>
 											</a>
 											<p style="width: 190px">'.$arr['name'].'</p>
 											<h4>'.$newprice.'<span>'.$price.' €</span></h4>
