@@ -15,7 +15,7 @@
 	            <!-- Mostramos los métodos de pago de la web -->
 	            <div class="col-md-3 w3_footer_grid">
 	                <h3>Métodos de pago</h3>
-	                <img src="imagenes/card.png" alt=" " class="img-responsive" />
+	                <img src="imagenes/card.png" alt="Métodos de pago" class="img-responsive" />
 	            </div>
 	            <!-- //Acaban los métodos de pago -->
 	            <!-- Mostramos nuestras redes sociales -->
