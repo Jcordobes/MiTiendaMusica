@@ -5,7 +5,7 @@ $GLOBALS['currpage']='Inicio';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
-    <html>
+    <html lang="es">
     <!-- head -->
     <?php include 'head.php'; ?>
     <!-- //head -->
