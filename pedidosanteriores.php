@@ -1,7 +1,7 @@
 <?php
 // Iniciar sesión
 session_start();
-$GLOBALS['currpage']='Layout';
+$GLOBALS['currpage']='Pedidos anteriores';
 include 'config.php';
 ?>
 <!DOCTYPE.php>

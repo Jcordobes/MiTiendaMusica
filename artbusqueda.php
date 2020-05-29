@@ -1,7 +1,7 @@
 <?php
 // Iniciar sesión
 session_start();
-$GLOBALS['currpage']='Artist Search Results';
+$GLOBALS['currpage']='Busqueda de artistas';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
@@ -13,7 +13,7 @@ include 'config.php';
 <!-- header -->
 <?php include 'header.php'; ?> 
 <!-- //header -->
-<!-- products-breadcrumb -->
+<!-- breadcrumb -->
 	<div class="products-breadcrumb">
 		<div class="container">
 			<ul>
@@ -22,7 +22,7 @@ include 'config.php';
 			</ul>
 		</div>
 	</div>
-<!-- //products-breadcrumb -->
+<!-- //breadcrumb -->
 <!-- banner -->
 <?php include 'leftsticky.php'; ?>
 <!-- content -->
@@ -60,7 +60,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="artistdesc.php?artist_id='.$arr['artist_id'].'">
-												<img height="200px" width="200px" src="artist_images/'.$cnt.'.jpg"/>
+												<img height="200px" width="200px" src="artistas_img/'.$cnt.'.jpg"/>
 											</a>
 											<h4>'.$arr['first_name'].' '.$arr['last_name'].'</h4>
 

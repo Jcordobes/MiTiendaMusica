@@ -1,6 +1,6 @@
 <?php
 // Iniciar sesión
-$GLOBALS['currpage']='Register';
+$GLOBALS['currpage']='Registrarse';
 include 'config.php';
 // Define variables and initialize with empty values
 $username = $password = $confirm_password = "";
@@ -102,7 +102,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!-- header -->
 <?php include 'header.php'; ?> 
 <!-- //header -->
-<!-- products-breadcrumb -->
+<!-- breadcrumb -->
 	<div class="products-breadcrumb">
 		<div class="container">
 			<ul>
@@ -111,7 +111,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			</ul>
 		</div>
 	</div>
-<!-- //products-breadcrumb -->
+<!-- //breadcrumb -->
 <!-- banner -->
 <?php include 'leftsticky.php'; ?>
 <!-- content -->

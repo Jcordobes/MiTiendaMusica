@@ -13,7 +13,7 @@ include 'config.php';
 <!-- header -->
 <?php include 'header.php'; ?> 
 <!-- //header -->
-<!-- products-breadcrumb -->
+<!-- breadcrumb -->
 	<div class="products-breadcrumb">
 		<div class="container">
 			<ul>
@@ -22,7 +22,7 @@ include 'config.php';
 			</ul>
 		</div>
 	</div>
-<!-- //products-breadcrumb -->
+<!-- //breadcrumb -->
 <!-- banner -->
 <?php include 'leftsticky.php'; ?>
 <!-- content -->
@@ -50,7 +50,6 @@ include 'config.php';
 				echo '<div class="row">';
 				$cnt=0;
 				while($arr=$res->fetch_assoc()){ 
-				//echo $arr['name'];
 				$cnt=$arr['album_id']%60;
 				$cnt+=1;
 				echo'<div class="col-md-3 top_brand_left">
@@ -61,7 +60,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="albumdesc.php?album_id='.$arr['album_id'].'">
-												<img height="200px" width="200px" src="album_images/'.$cnt.'.jpg"/>
+												<img height="200px" width="200px" src="albumes_img/'.$cnt.'.jpg"/>
 											</a>
 											<h4>'.$arr['name'].'</h4>
 										</div>
@@ -79,10 +78,8 @@ include 'config.php';
 							</div>
 						</div>
 						</div>
-						</div>';
-						
-				}
-				
+						</div>';	
+				}	
 				echo '</div>';
 				?>
 <!-- //content -->

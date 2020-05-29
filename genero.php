@@ -1,7 +1,7 @@
 <?php
 // Iniciar sesión
 session_start();
-$GLOBALS['currpage']='Genre';
+$GLOBALS['currpage']='Genero';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
@@ -13,7 +13,7 @@ include 'config.php';
 <!-- header -->
 <?php include 'header.php'; ?> 
 <!-- //header -->
-<!-- products-breadcrumb -->
+<!-- breadcrumb -->
 	<div class="products-breadcrumb">
 		<div class="container">
 			<ul>
@@ -22,7 +22,7 @@ include 'config.php';
 			</ul>
 		</div>
 	</div>
-<!-- //products-breadcrumb -->
+<!-- //breadcrumb -->
 <!-- banner -->
 <?php include 'leftsticky.php'; ?>
 <!-- content -->
@@ -41,7 +41,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="generobusqueda.php?genre_id='.$arr['genre_id'].'">
-												<img height="200px" width="200px" src="genre_images/'.$arr['genre'].'.jpg"/>
+												<img height="200px" width="200px" src="generos_img/'.$arr['genre'].'.jpg"/>
 											</a>
 											<h4>'.$arr['genre'].'</h4>
 										</div>

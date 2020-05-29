@@ -1,6 +1,6 @@
 <?php
 // Iniciar sesión
-$GLOBALS['currpage']='Login';
+$GLOBALS['currpage']='Iniciar sesión';
 include 'config.php';
 $username = $password = "";
 $username_err = $password_err = "";
@@ -87,7 +87,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 <!-- header -->
 <?php include 'header.php'; ?> 
 <!-- //header -->
-<!-- products-breadcrumb -->
+<!-- breadcrumb -->
 	<div class="products-breadcrumb">
 		<div class="container">
 			<ul>
@@ -96,7 +96,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 			</ul>
 		</div>
 	</div>
-<!-- //products-breadcrumb -->
+<!-- //breadcrumb -->
 <!-- banner -->
 <?php include 'leftsticky.php'; ?>
 <!-- content -->

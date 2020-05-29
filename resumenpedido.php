@@ -1,7 +1,7 @@
 <?php
 // Iniciar sesión
 session_start();
-$GLOBALS['currpage']='Order Summary';
+$GLOBALS['currpage']='Resumen pedido';
 include 'config.php';
 if(!isset($_SESSION['loggedin'])){
 	header("location: index.php");
@@ -16,7 +16,7 @@ if(!isset($_SESSION['loggedin'])){
 <!-- header -->
 <?php include 'header.php'; ?> 
 <!-- //header -->
-<!-- products-breadcrumb -->
+<!-- breadcrumb -->
 	<div class="products-breadcrumb">
 		<div class="container">
 			<ul>
@@ -25,7 +25,7 @@ if(!isset($_SESSION['loggedin'])){
 			</ul>
 		</div>
 	</div>
-<!-- //products-breadcrumb -->
+<!-- //breadcrumb -->
 <!-- banner -->
 	<div align="center">
 		<h1>resumen del pedido</h1>

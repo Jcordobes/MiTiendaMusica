@@ -1,7 +1,7 @@
 <?php
 //  Iniciar sesión
 session_start();
-$GLOBALS['currpage']='Layout';
+$GLOBALS['currpage']='Inicio';
 include 'config.php';
 ?>
 <!DOCTYPE.php>
@@ -13,7 +13,7 @@ include 'config.php';
 <!-- header -->
 <?php include 'header.php'; ?> 
 <!-- //header -->
-<!-- products-breadcrumb -->
+<!-- breadcrumb -->
 	<div class="products-breadcrumb">
 		<div class="container">
 			<ul>
@@ -22,7 +22,7 @@ include 'config.php';
 			</ul>
 		</div>
 	</div>
-<!-- //products-breadcrumb -->
+<!-- //breadcrumb -->
 <!-- banner -->
 <?php include 'leftsticky.php'; ?>
 			<section class="slider">
@@ -92,7 +92,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="artistdesc.php?artist_id='.$arr['artist_id'].'">
-												<img height="200px" width="200px" src="artist_images/'.$cnt.'.jpg"/>
+												<img height="200px" width="200px" src="artistas_img/'.$cnt.'.jpg"/>
 											</a>
 											<h4>'.$arr['first_name'].' '.$arr['last_name'].'</h4>
 
@@ -143,7 +143,7 @@ include 'config.php';
 									<div class="snipcart-item block">
 										<div class="snipcart-thumb">
 											<a href="cancdesc.php?track_id='.$arr['track_id'].'">
-												<img height="200px" width="200px" src="track_images/'.$cnt.'.jpg"/>
+												<img height="200px" width="200px" src="canciones_img/'.$cnt.'.jpg"/>
 											</a>
 											<p style="width: 190px">'.$arr['name'].'</p>
 											<h4>'.$newprice.'<span>'.$price.' €</span></h4>
