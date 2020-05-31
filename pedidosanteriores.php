@@ -35,11 +35,6 @@ include 'config.php';
         background-color: #f2f2f2
     }
 
-    input {
-        resize: horizontal;
-        width: 200px;
-    }
-
     input:active {
         width: auto;
     }
