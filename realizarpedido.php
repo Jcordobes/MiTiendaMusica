@@ -30,7 +30,6 @@ if(!isset($_SESSION['loggedin'])){
         <?php
 	$cid= $_SESSION['customer_id'];
 	$currDate = date('Y-m-d');
-	//echo $currDate; echo $emailID;
 	$query = "INSERT into orders(track_id, order_id, date, original_price,discount,paid_price) values(?, ?, ?, ?, ?, ?)";
 	$stmt=$mysqli->prepare($query);
 	$stpl=$mysqli->prepare("INSERT into places(customer_id,order_id, track_id) values(?, ?, ?)");
@@ -73,9 +72,6 @@ if(!isset($_SESSION['loggedin'])){
         <!-- Bootstrap Core JavaScript -->
         <?php include 'corejscript.php'; ?>
         <!-- //Bootstrap Core JavaScript -->
-        <!-- Mini Cart -->
-        <?php include 'minicart.php'; ?>
-        <!-- //Mini Cart -->
 
     </body>
 

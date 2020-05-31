@@ -84,9 +84,6 @@ if(!isset($_SESSION['loggedin'])){
                 <!-- Bootstrap Core JavaScript -->
                 <?php include 'corejscript.php'; ?>
                 <!-- //Bootstrap Core JavaScript -->
-                <!-- Mini Cart -->
-                <?php include 'minicart.php'; ?>
-                <!-- //Mini Cart -->
 
     </body>
     </html>

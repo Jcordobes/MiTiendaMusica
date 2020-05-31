@@ -190,9 +190,6 @@ include 'config.php';
         <!-- Bootstrap Core JavaScript -->
         <?php include 'corejscript.php'; ?>
         <!-- //Bootstrap Core JavaScript -->
-        <!-- Mini Cart -->
-        <?php include 'minicart.php'; ?>
-        <!-- //Mini Cart -->
 
     </body>
 

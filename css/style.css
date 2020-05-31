@@ -71,13 +71,7 @@ i.badge.badge-notify.my-cart-badge {
     color: #fff;
 	top: 1em;
 }
-input[type="submit"],#PPMiniCart .minicart-submit,.w3ls_vegetables ul li a,input[type="reset"],.agileinfo_mail_grid_left ul li a,.events_bottom_left2 ul li a,.w3ls_service_grids1_right a,ul.agileits_social_icons li a,.w3l_banner_nav_right_banner_pet a,.w3ls_w3l_banner_nav_right_grid_head_grid ul li a,.products-breadcrumb ul li a,.w3_footer_grid ul li a,.w3l_fresh_vegetables_grid ul li a,.wthree_footer_copy p a,.agile_top_brand_left_grid1 .button,.w3ls_logo_products_left1 ul.special_items li a,.w3ls_logo_products_left1 ul.phone_email li a{
-	transition: .5s ease-in;
-	-webkit-transition: .5s ease-in;
-	-moz-transition: .5s ease-in;
-	-o-transition: .5s ease-in;
-	-ms-transition: .5s ease-in;
-}
+
 .agileits_header{
 	background:#212121;
 }
@@ -587,73 +581,7 @@ ul.dropdown-menu.drp-mnu li a i {
     margin: .35em 0 0;
     background: url(../imagenes/cart.png) no-repeat 90px 9px;
 }
-#PPMiniCart form {
-    width: 590px !important;
-	padding: 10px 20px 40px !important;
-	max-height:450px !important;
-}
-#PPMiniCart ul {
-    width: 548px !important;
-}
-#PPMiniCart .minicart-item a {
-    color: #212121 !important;
-    font-size: 1em;
-    display: block;
-    margin-bottom: .5em;
-    text-transform: capitalize;
-}
-#PPMiniCart .minicart-item {
-    min-height:60px !important;
-}
-#PPMiniCart .minicart-attributes li {
-    color: #999;
-}
-#PPMiniCart .minicart-remove {
-    background: #fa1818 !important;
-    border: 1px solid #fa1818 !important;
-	opacity: 1 !important;
-	outline:none;
-}
-#PPMiniCart .minicart-submit:hover{
-	background:#6F6FFF !important;
-	border-color: #6F6FFF !important;
-}
-#PPMiniCart .minicart-subtotal {
-    padding-left: 25px !important;
-	bottom: -17px !important;
-}
-#PPMiniCart {
-    left: 44% !important;
-}
-.minicart-showing #PPMiniCart form{
-    overflow-x: hidden;
-    overflow-y: auto;
-}
-#PPMiniCart .minicart-footer {
-    position: relative;
-	width: 80%;
-}
-#PPMiniCart .minicart-submit {
-    position: absolute;
-    bottom: -28px!important;
-    right: 0px!important;
-    min-width: 153px;
-    height: 33px;
-    margin-right:6px;
-    padding: 0 9px;
-    border: 1px solid #6F6FFF!important;
-	background:#6F6FFF!important;
-	position: absolute;
-    border-radius: 0px!important;
-    color: #000;
-    text-shadow:none!important;
-    cursor: pointer;
-}
-#PPMiniCart .minicart-submit img {
-    vertical-align: middle;
-    padding: 4px 0 0 2px;
-    display: none;
-}
+
 /*--/payment--*/
 /*-- Pay-page --*/
 
@@ -2997,9 +2925,7 @@ input.checkbox:checked:after {
 	.product_list_header {
 		margin-left: 2em;
 	}
-	#PPMiniCart {
-		left: 42% !important;
-	}
+	
 	.snipcart-details input.button {
 		font-size: 13px;
 	}
@@ -3601,9 +3527,7 @@ input.checkbox:checked:after {
 	.w3l_header_right {
 		padding-left: 1.5em;
 	}
-	#PPMiniCart {
-		left: 39% !important;
-	}
+	
 	.container {
 		width: 750px;
 	}
@@ -3749,12 +3673,6 @@ input.checkbox:checked:after {
 	.w3agile_newsletter_right {
 		width: 80%;
 	}
-	#PPMiniCart {
-		top: 140px !important;
-	}
-	#PPMiniCart form {
-		max-height: 185px !important;
-	}
 }
 @media (max-width: 667px){
 	.w3l_search {
@@ -3774,17 +3692,8 @@ input.checkbox:checked:after {
 		margin: 3em 0 0;
 		padding: 2.5em 0 0;
 	}
-	#PPMiniCart {
-		left: 36% !important;
-	}
-	#PPMiniCart form {
-		max-height: 165px !important;
-	}
 }
 @media (max-width: 640px){
-	#PPMiniCart form {
-		max-height: 400px !important;
-	}
 	.fixed {
 		position: relative;
 	}
@@ -3914,18 +3823,6 @@ input.checkbox:checked:after {
 	.top_brand_left:nth-child(2) {
 		margin: 0 0 2em;
 	}
-	#PPMiniCart form {
-		width: 506px !important;
-	}
-	#PPMiniCart {
-		left: 41% !important;
-	}
-	#PPMiniCart ul {
-		width: 464px !important;
-	}
-	#PPMiniCart form {
-		max-height: 210px !important;
-	}
 }
 @media (max-width: 568px){
 	.w3l_search {
@@ -3949,9 +3846,6 @@ input.checkbox:checked:after {
 	.w3agile_newsletter_right {
 		width: 100%;
 	}
-	#PPMiniCart form {
-		max-height: 100px !important;
-	}
 	.checkout-right h4, .address_form_agile h4 {
 		font-size: 1em;
 		line-height: 1.7em;
@@ -3962,9 +3856,6 @@ input.checkbox:checked:after {
 	}
 }
 @media (max-width: 480px){
-	#PPMiniCart form {
-		max-height: 350px !important;
-	}
 	.w3l_search {
 		margin: .1em 0 0.5em 1.7em;
 		width: 51%;
@@ -4235,15 +4126,6 @@ input.checkbox:checked:after {
 		padding: .3em 2.5em .3em 1em;
 		background: url(../imagenes/cart.png) no-repeat 116px 5px;
 	}
-	#PPMiniCart form {
-		width: 400px !important;
-	}
-	#PPMiniCart ul {
-		width: 358px !important;
-	}
-	#PPMiniCart {
-		left: 51% !important;
-	}
 }
 @media (max-width: 414px){
 	.w3l_offers a {
@@ -4388,15 +4270,6 @@ input.checkbox:checked:after {
 	.agileinfo_mail_grid_right input[type="submit"]{
 		margin-bottom:1em;
 	}
-	#PPMiniCart form {
-		width: 360px !important;
-	}
-	#PPMiniCart ul {
-		width: 318px !important;
-	}
-	#PPMiniCart {
-		left: 55% !important;
-	}
 }
 @media (max-width: 384px){
 	.w3l_search input[type="submit"]:hover {
@@ -4454,34 +4327,6 @@ input.checkbox:checked:after {
 	}
 	.w3l_header_right {
 		padding-left: 3.5em;
-	}
-	#PPMiniCart form {
-		width: 300px !important;
-		padding: 10px 10px 40px !important;
-	}
-	#PPMiniCart ul {
-		width: 278px !important;
-	}
-	#PPMiniCart .minicart-remove {
-		width: 11px !important;
-		height: 11px !important;
-		line-height: 0;
-		margin: 3px 0 0 !important;
-	}
-	#PPMiniCart {
-		left: 64% !important;
-	}
-	#PPMiniCart .minicart-item a {
-		font-size: 13px;
-	}
-	#PPMiniCart .minicart-attributes li {
-		font-size: 12px;
-	}
-	span.minicart-price {
-		font-size: 12px;
-	}
-	#PPMiniCart .minicart-quantity {
-		font-size: 11px;
 	}
 }
 @media (max-width: 375px){
@@ -4785,19 +4630,6 @@ input.checkbox:checked:after {
 	}
 	.w3l_header_right {
 		padding-left:1.5em;
-	}
-	#PPMiniCart form {
-		width: 285px !important;
-	}
-	#PPMiniCart ul {
-		width: 263px !important;
-	}
-	#PPMiniCart {
-		left: 69% !important;
-	}
-	#PPMiniCart .minicart-subtotal {
-		padding-left: 5px !important;
-		font-size: 13px !important;
 	}
 	.snipcart-details input.button {
 		font-size: 13px;

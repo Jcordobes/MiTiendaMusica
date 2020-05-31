@@ -159,9 +159,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         <!-- Bootstrap Core JavaScript -->
         <?php include 'corejscript.php'; ?>
         <!-- //Bootstrap Core JavaScript -->
-        <!-- Mini Cart -->
-        <?php include 'minicart.php'; ?>
-        <!-- //Mini Cart -->
 
     </body>
 
